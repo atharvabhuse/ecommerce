@@ -1,0 +1,16 @@
+.footer_Container{
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    margin-top: 2rem;
+
+}
+.footer_Container1{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 33vw;
+}

@@ -1,0 +1,15 @@
+.product_container{
+    transition: all 0.2s;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.product_container:hover{
+    transform: translateY(-0.2rem);
+}
+
+@media screen and (max-width: 600px){
+    .product_container img{
+        width: 40vw;
+
+    }
+}

@@ -1,0 +1,42 @@
+.home_container{
+    color: black;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    height: 100vh;
+}
+.home_container::after{
+    content: '';
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100vw;
+    height: 100vmin;
+    clip-path: polygon(100% 68%, 0 100%, 100% 100%);
+}
+.home_button{
+    padding: 1vw;
+    background-color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+.home_button:hover{
+    background-color: rgb(224, 219, 219);
+}
+.home_product_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2vmax;
+    justify-content: flex-start;
+}
