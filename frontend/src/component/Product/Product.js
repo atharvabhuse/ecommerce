@@ -11,19 +11,22 @@ const Product = ({product}) => {
         color: 'lightgray',
         activeColor: 'green',
         size: window.innerWidth < 600 ? 20 : 25,
-        value: 3.5,
+        value: product.ratings,
         isHalf: true
     }
+    console.log(product)
   return (
     <div className='product_container'>
-      <Link to={product.id}>
-        <img src={productImage} alt='name' />
-        <p>product name</p>
+      <Link className='product_link' to={`/product/${product._id}`}>
+        <img className='product_image' src={product.images[0]?product.images[0].url:''} alt='name' />
+        <p>{product.name}</p>
+        <p>{product.description}</p>
+        <p>Id- {product._id}</p>
         <div>
             <ReactStars {...options} />
-            <span>10 reviews</span>
+            <span>({product.numOfReviews} Reviews)</span>
         </div>
-        <span>price</span>
+        <span>₹ {product.price}</span>
       </Link>
     </div>
   )

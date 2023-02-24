@@ -2,9 +2,24 @@
     transition: all 0.2s;
     margin-left: 1vw;
     margin-right: 1vw;
+    text-decoration: none;
+    color: black;
+}
+.product_container p{
+    color: black;
+}
+
+.product_container span{
+    color: black;
+}
+.product_link{
+    text-decoration: none;
 }
 .product_container:hover{
     transform: translateY(-0.2rem);
+}
+.product_image{
+    width: 10vw;
 }
 
 @media screen and (max-width: 600px){

@@ -1,0 +1,158 @@
+.loginSignup_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loginSignup_box{
+    background-color: white;
+    width: 25vw;
+    height: 70vh;
+    overflow: hidden;
+}
+.loginSignup_toggle{
+    display: flex;
+    height: 3vmax;
+}
+.loginSignup_toggle p{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.selectedTab{
+    padding-bottom: 4vh;
+    border-bottom: 3px solid tomato;
+}
+.noneSelectedTab{
+    padding-bottom: 4vh;
+}
+.loginSignup_box button{
+    background-color: tomato;
+    height: 3px;
+    width: 50%;
+    border: none;
+    transition: all 0.5s;
+}
+.loginSignup_toggle p:hover{
+    color: tomato;
+}
+.loginForm,
+.signUpForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginEmail input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.loginPassword input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.loginEmail svg{
+    transform: translateX(2vw) translateY(1vh);
+}
+.loginPassword svg{
+    transform: translateX(2vw) translateY(1vh);
+}
+.loginForm a{
+    text-decoration: none;
+    color: black;
+    text-align: end;
+    justify-content: end;
+    align-self: flex-end;
+    margin-top: 1vh;
+}
+.loginBtn{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+    padding: 1.5vh 6vw;
+    border: none;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+.signUpEmail input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.signUpPassword input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.signupName input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.signUpEmail svg{
+    transform: translateX(2vw) translateY(1vh);
+}
+.signUpPassword svg{
+    transform: translateX(2vw) translateY(1vh);
+}
+.signupName svg{
+    transform: translateX(2vw) translateY(1vh);
+}
+.signUpBtn{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+    padding: 1.5vh 6vw;
+    border: none;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .loginSignup_container{
+        display: flex;
+        margin-top: 25vh;
+    }
+    .loginSignup_box{
+        width: 100vw;
+        height: 95vh;
+    }
+    .loginEmail input{
+        width: 80vw;
+        margin-top: 5vh;
+    }
+    .loginPassword input{
+        width: 80vw;
+    }
+    .signUpEmail input{
+        width: 80vw;
+    }
+    .signUpPassword input{
+        width: 80vw;
+    }
+    .signupName input{
+        width: 80vw;
+    }
+    .loginForm a{
+        margin-right: 10vw;
+    }
+}

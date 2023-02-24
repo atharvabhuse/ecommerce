@@ -1,0 +1,104 @@
+.productDetails_container{
+    padding: 5vmax;
+    display: flex;
+    flex-direction: row;
+}
+.productDetails_imageContainer{
+    width: 50vw;
+}
+.productDetails_content{
+    width: 50vw;
+}
+.productDetails_image{
+    width: 30vw;
+}
+.productDetails_input{
+    width: 1vw;
+    padding: 0.4vw;
+    margin-bottom: 0.4vw;
+    text-align: center;
+}
+.productDetails_incdec{
+    padding: 0.4vw;
+    width: 2vw;
+    text-align: center;
+    background-color: rgb(79, 78, 78);
+    color: white;
+    border: 1px solid transparent;
+}
+.productDetails_redColor{
+    color: red;
+}
+.productDetails_greenColor{
+    color: green;
+}
+.productDetails_addToCart{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: rgb(255, 217, 0);
+    color: black;
+}
+.productDetails_submit{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: rgb(255, 217, 0);
+    color: black;
+}
+.productDetails_addToCart:hover{
+    background-color: rgb(235, 203, 19);
+}
+.productDetails_reviewsBlock{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2vh;
+}
+.productDetails_incdecBlock{
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+.productDetails_addToCartBlock{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2vh;
+}
+.productDetails_reviewsContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: auto;
+}
+.productDetails_reviews{
+    display: flex;
+    overflow: auto;
+}
+
+@media screen and (max-width: 600px){
+    .productDetails_container{
+        flex-direction: column;
+    }
+    .productDetails_content{
+        align-items: center;
+    }
+    .productDetails_input{
+        width: 4vw;
+        padding: 0.4vw;
+        margin-bottom: 0.4vw;
+        text-align: center;
+    }
+    .productDetails_incdec{
+        padding: 0.4vw;
+        width: 6vw;
+        text-align: center;
+        background-color: rgb(79, 78, 78);
+        color: white;
+        border: 1px solid transparent;
+    }
+    
+}

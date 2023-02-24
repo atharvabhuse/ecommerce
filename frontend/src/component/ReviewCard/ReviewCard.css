@@ -1,0 +1,23 @@
+.reviewCard_container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    margin: 1vw;
+    padding: 2vw;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 20vw;
+}
+.reviewCard_image{
+    width: 5vw;
+    height: 12vh;
+}
+.reviewCard_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
