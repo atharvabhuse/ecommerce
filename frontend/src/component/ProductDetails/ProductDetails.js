@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ProductDetails.css'
 import Carousel from 'react-material-ui-carousel'
 import { useSelector, useDispatch } from 'react-redux'
@@ -9,6 +9,7 @@ import ReviewCard from '../ReviewCard/ReviewCard'
 import { Divider } from '@mui/material'
 import Loader from '../layout/Loader/Loader'
 import MetaData from '../layout/MetaData'
+import { addItemsToCart } from '../../actions/cartAction'
 
 
 
@@ -32,6 +33,30 @@ const ProductDetails = () => {
         size: window.innerWidth < 600 ? 20 : 25,
         value: product.ratings?product.ratings:0,
         isHalf: true
+    }
+
+    const [quantity, setQuantity] = useState(1)
+
+    const decHandler = () => {
+        if(quantity<=0){
+            return
+        }else{
+            setQuantity(quantity-1)
+        }
+    }
+
+    const incHandler = () => {
+        console.log(product.stock, quantity)
+        if(product.stock<=quantity){
+            return
+        }else{
+            setQuantity(quantity+1)
+        }
+    }
+    console.log(product)
+
+    const addToCartHandler = () => {
+        dispatch(addItemsToCart(product._id,quantity))
     }
 
     console.log(product)
@@ -65,15 +90,19 @@ const ProductDetails = () => {
                                 <h1>₹ {product.price}</h1>
                                 Status- <b className={product.stock < 1 ? 'productDetails_redColor' : 'productDetails_greenColor'}>{product.stock < 1 ? 'Out of Stock' : 'Available'}</b>
                             </div>
+                            stock available- <b className={product.stock-quantity < 1 ? 'productDetails_redColor' : 'productDetails_greenColor'}>{product.stock-quantity}</b>
+                            <div>
+
+                            </div>
 
                             <div className='productDetails_incdecBlock'>
-                                <button className='productDetails_incdec'>-</button>
-                                <input className='productDetails_input' value='1' type='number' />
-                                <button className='productDetails_incdec'>+</button>
+                                <button className='productDetails_incdec' onClick={decHandler}>-</button>
+                                <input readOnly className='productDetails_input' value={quantity} type='number' />
+                                <button className='productDetails_incdec' onClick={incHandler}>+</button>
                             </div>
 
                             <div className='productDetails_addToCartBlock'>
-                                <button className='productDetails_addToCart'>Add to cart</button>
+                                <button onClick={addToCartHandler} className='productDetails_addToCart'>Add to cart</button>
                             </div>
 
 

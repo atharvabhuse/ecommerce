@@ -22,7 +22,7 @@ const Header = () => {
     link1Margin: "2vmax",
   }
   return (
-    <div>
+    <div style={{zIndex: 5}}>
       <ReactNavbar {...options}
       />
     </div>

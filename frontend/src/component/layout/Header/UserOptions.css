@@ -1,0 +1,6 @@
+.userOptions_container{
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    z-index: 0;
+}

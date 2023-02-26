@@ -1,0 +1,72 @@
+.updateProfile_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.updateProfile_box{
+    background-color: white;
+    width: 25vw;
+    height: 70vh;
+    overflow: hidden;
+}
+.updateProfile_heading{
+    text-align: center
+}
+.updateProfile_Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.updateProfile input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.updateProfile_Email input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.updateProfile_Name input{
+    padding: 1.5vh 2.5vw;
+    border-radius: 5px;
+    width: 18vw;
+    margin-top: 4vh;
+}
+.updateProfile_Btn{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+    padding: 1.5vh 6vw;
+    border: none;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .updateProfile_container{
+        display: flex;
+        margin-top: 25vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .updateProfile_box{
+        width: 100vw;
+        height: 95vh;
+    }
+    .updateProfile_Email input{
+        width: 80vw;
+    }
+    .updateProfile_Name input{
+        width: 80vw;
+    }
+}

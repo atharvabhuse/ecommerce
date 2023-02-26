@@ -5,6 +5,7 @@ const express =require('express')
 const app = express()
 
 const bodyParser = require("body-parser")
+const fileUpload = require('express-fileupload')
 const cookiePaser = require("cookie-parser")
 
 // const fileUpload = require("express-fileupload");
@@ -25,6 +26,7 @@ const order = require("./routes/orderRoute");
 app.use(express.json())
 app.use(cookiePaser())
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(fileUpload())
 
 
 app.use(bodyParser.json())

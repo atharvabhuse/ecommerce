@@ -5,14 +5,16 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import FaceIcon from '@mui/icons-material/Face';
 import './LoginSignup.css'
 import {useDispatch, useSelector} from "react-redux"
-import { clearErrors, login } from '../../actions/userAction';
+import { clearErrors, login, register } from '../../actions/userAction';
 import Loader from '../layout/Loader/Loader';
 
 const LoginSignup = () => {
 
     const dispatch = useDispatch()
+    const errMessage = useSelector(state=>state.user.error)
 
     const {error, loading, isAuthenticated} = useSelector(state => state.user)
+    console.log(error)
 
     const loginTab  = useRef(null)
     const registerTab = useRef(null)
@@ -21,6 +23,7 @@ const LoginSignup = () => {
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
     const [tab, setTab] = useState('login')
+    console.log('ref',registerTab,loginTab)
 
 
     // const switchTab = (e, tab) => {
@@ -55,6 +58,8 @@ const LoginSignup = () => {
         myForm.set('email',email)
         myForm.set('password',password)
         console.log('form register')
+        dispatch(register(myForm))
+        navigate('/login')
     }
 
     const registerDataChange =(e) => {
@@ -74,13 +79,16 @@ const LoginSignup = () => {
 
         if(isAuthenticated){
             navigate("/account")
+        }else{
+            navigate('/login')
         }
-    },[dispatch,error,navigate,isAuthenticated])
+    },[isAuthenticated,dispatch,error,navigate])
 
     
     const loginSubmit = (e) => {
         e.preventDefault()
-        dispatch(login(loginEmail, loginPassword))        
+        dispatch(login(loginEmail, loginPassword))
+        navigate('/login')       
     }
     console.log("form login", isAuthenticated,error)
 
@@ -117,8 +125,8 @@ const LoginSignup = () => {
                     onChange={(e)=>setLoginPassword(e.target.value)}
                     />
                 </div>
-                <Link to='/password/forget' className=''>Forget Password ?</Link>
-                {isAuthenticated ? '' : <p style={{color: 'red'}}>{errorMessage}</p>}
+                <Link to='/password/forgot' style={{color: 'black'}}>Forgot Password ?</Link>
+                {isAuthenticated && loginTab.current!=null ? '' : <p style={{color: 'red'}}>{errorMessage}</p>}
 
                 <div className='loginButton_box'>
                 <input type='submit' value='Login' className='loginBtn' />
@@ -160,6 +168,7 @@ const LoginSignup = () => {
                     onChange={registerDataChange}
                     />
                 </div>
+                {isAuthenticated && registerTab.current ? '' : <p style={{color: 'red'}}>{errorMessage}</p>}
                 <input 
                 type='submit'
                 value='Register'
