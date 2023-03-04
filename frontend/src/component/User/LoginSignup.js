@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import FaceIcon from '@mui/icons-material/Face';
@@ -69,7 +69,11 @@ const LoginSignup = () => {
     const [errorMessage, setErrorMessage] = useState('')
 
     const navigate = useNavigate()
+    const location = useLocation()
 
+    const redirect = location.search ? location.search.split('=')[1]:'/account'
+
+    console.log('location',location,redirect)
     useEffect(()=>{
         if(error){
             dispatch(clearErrors())
@@ -78,11 +82,12 @@ const LoginSignup = () => {
         }
 
         if(isAuthenticated){
-            navigate("/account")
-        }else{
+            navigate(redirect)
+        }
+        else{
             navigate('/login')
         }
-    },[isAuthenticated,dispatch,error,navigate])
+    },[isAuthenticated,dispatch,error,navigate, redirect])
 
     
     const loginSubmit = (e) => {

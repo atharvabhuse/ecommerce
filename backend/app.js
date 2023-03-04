@@ -8,6 +8,9 @@ const bodyParser = require("body-parser")
 const fileUpload = require('express-fileupload')
 const cookiePaser = require("cookie-parser")
 
+const dotenv = require('dotenv')
+dotenv.config({path: 'backend/config/config.env'})
+
 // const fileUpload = require("express-fileupload");
 // const path = require("path")
 
@@ -20,6 +23,7 @@ const errorMiddleware = require("./middleware/error")
 const product = require("./routes/productRoute");
 const user = require("./routes/userRoute");
 const order = require("./routes/orderRoute");
+const payment = require('./routes/paymentRoute')
 
 
 //it is used to parse request body
@@ -36,6 +40,7 @@ app.use(bodyParser.json())
 app.use("/api/v1", product)
 app.use("/api/v1", user)
 app.use("/api/v1",order)
+app.use('/api/v1',payment)
 
 
 //middleware for errors

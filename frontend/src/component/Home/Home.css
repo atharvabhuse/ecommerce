@@ -9,7 +9,7 @@
     align-self: center;
     height: 100vh;
 }
-.home_container::after{
+/* .home_container::after{
     content: '';
     color: black;
     background-color: white;
@@ -19,7 +19,7 @@
     width: 100vw;
     height: 100vmin;
     clip-path: polygon(100% 68%, 0 100%, 100% 100%);
-}
+} */
 .home_button{
     padding: 1vw;
     background-color: white;

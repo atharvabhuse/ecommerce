@@ -1,0 +1,80 @@
+.shipping_container{
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shipping_box{
+    width: 30vw;
+    height: 90vh;
+    overflow: hidden;
+}
+.shipping_heading{
+    text-align: center;
+    font: 400 1.3vmax 'Roboto';
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px solid black;
+}
+.shipping_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+    height: 80%;
+}
+.shipping_form > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+.shipping_form > div > input{
+    padding: 1vmax 4vmax;
+    width: 80%;
+    padding-right: 1vmax;
+    border-radius: 5px;
+    outline: none;
+}
+.shipping_form > div > select{
+    padding: 1vmax 4vmax;
+    width: 100%;
+    padding-right: 1vmax;
+    border-radius: 5px;
+    outline: none;
+}
+.shipping_button{
+    border: none;
+    background-color: tomato;
+    color: white;
+    width: 100%;
+    padding: 1vmax;
+    cursor: pointer;
+    margin: 2vmax;
+}
+.shipping_button:hover{
+    background-color: rgb(252, 68, 36);
+}
+.err{
+    color: red;
+}
+@media screen and (max-width: 600px) {
+.shipping_box{
+    width: 100vw;
+    height: 95vh;
+}
+.shipping_heading{
+    font: 400 6vw 'Roboto';
+}
+.shipping_form{
+    padding: 11vw;
+}
+.shipping_form > input,
+.shipping_form > select{
+    padding: 5vw 10vw;
+    font: 300 4vw 'Roboto'
+}
+}

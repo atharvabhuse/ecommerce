@@ -29,6 +29,8 @@ const Home = () => {
       <Link to='/search'>search</Link>
       <Link to='/login'>Login</Link>
       <Link to='/account'>Account</Link>
+      <Link to='/cart'>Cart</Link>
+      <Link to='/products'>Products</Link>
       <h1>Find amazing products here</h1>
       <button className='home_button'>scroll<CgScrollV style={{marginLeft: '1vw', fontSize: '1rem'}} /></button>
     </div>

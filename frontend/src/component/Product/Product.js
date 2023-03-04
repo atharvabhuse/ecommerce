@@ -26,7 +26,7 @@ const Product = ({product}) => {
             <ReactStars {...options} />
             <span>({product.numOfReviews} Reviews)</span>
         </div>
-        <span>₹ {product.price}</span>
+        <span>₹ {new Intl.NumberFormat('en-IN').format(product.price)}</span>
       </Link>
     </div>
   )

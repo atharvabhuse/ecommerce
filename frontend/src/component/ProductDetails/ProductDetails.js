@@ -87,7 +87,7 @@ const ProductDetails = () => {
                             </div>
 
                             <div>
-                                <h1>₹ {product.price}</h1>
+                                <h1>₹ {new Intl.NumberFormat('en-IN').format(product.price)}</h1>
                                 Status- <b className={product.stock < 1 ? 'productDetails_redColor' : 'productDetails_greenColor'}>{product.stock < 1 ? 'Out of Stock' : 'Available'}</b>
                             </div>
                             stock available- <b className={product.stock-quantity < 1 ? 'productDetails_redColor' : 'productDetails_greenColor'}>{product.stock-quantity}</b>

@@ -4,6 +4,7 @@ import { SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material'
 import DashboardIcon from '@mui/icons-material/Dashboard'
 import ListAltIcon from '@mui/icons-material/ListAlt'
 import PersonIcon from '@mui/icons-material/Person'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -25,6 +26,9 @@ const UserOptions = ({ user }) => {
     const AccountHandler = () => {
         navigate('/account')
     }
+    const cartHandler = () => {
+        navigate('/cart')
+    }
     const LogoutUserHandler = () => {
         dispatch(logout())
         navigate('/login')
@@ -43,6 +47,7 @@ const UserOptions = ({ user }) => {
                 {user.role === "admin" ? <SpeedDialAction icon={<DashboardIcon />} onClick={DashboardHandler} tooltipTitle="Dashboard" /> : ''}
                 <SpeedDialAction icon={<ListAltIcon />} onClick={OrdersHandler} tooltipTitle="List" />
                 <SpeedDialAction icon={<PersonIcon />} onClick={AccountHandler} tooltipTitle="Person" />
+                <SpeedDialAction icon={<ShoppingCartIcon />} onClick={cartHandler} tooltipTitle="Cart" />
                 <SpeedDialAction icon={<ExitToAppIcon />} onClick={LogoutUserHandler} tooltipTitle="Exit" />
             </SpeedDial>
         </div>
