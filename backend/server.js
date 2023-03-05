@@ -9,8 +9,11 @@ process.on("uncaughtException",(err)=>{
 })
 
 //dotenv is used to get path of config.env file to the process.env
-const dotenv = require('dotenv')
-dotenv.config({path: "backend/config/config.env"})
+// const dotenv = require('dotenv')
+
+if(process.env.NODE_ENV !== "PRODUCTION"){
+require('dotenv').config({path: "backend/config/config.env"})
+}
 
 const cloudinary = require('cloudinary')
 
