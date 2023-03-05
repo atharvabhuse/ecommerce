@@ -10,6 +10,7 @@ import { clearErrors, createOrder } from '../../actions/orderAction'
 
 const Payment = () => {
 
+    //4000 0027 6000 3184
     const orderInfo = JSON.parse(sessionStorage.getItem('orderInfo'))
 
     const payBtn = useRef(null)
