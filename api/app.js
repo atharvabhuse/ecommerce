@@ -10,7 +10,7 @@ const cookiePaser = require("cookie-parser")
 
 // const dotenv = require('dotenv')
 if(process.env.NODE_ENV !== "PRODUCTION"){
-require('dotenv').config({path: 'backend/config/config.env'})
+require('dotenv').config({path: 'api/config/config.env'})
 }
 
 const path = require("path");

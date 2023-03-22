@@ -3,7 +3,7 @@
     "name":"ecommerce-atharva",
     "builds":[
         {
-            "src":"backend/server.js",
+            "src":"api/server.js",
             "use":"@vercel/node"
         }
     ],

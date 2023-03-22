@@ -12,7 +12,7 @@ process.on("uncaughtException",(err)=>{
 // const dotenv = require('dotenv')
 
 if(process.env.NODE_ENV !== "PRODUCTION"){
-require('dotenv').config({path: "backend/config/config.env"})
+require('dotenv').config({path: "api/config/config.env"})
 }
 
 const cloudinary = require('cloudinary')
