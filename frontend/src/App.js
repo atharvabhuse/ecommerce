@@ -53,7 +53,6 @@ const App = () => {
   return (
     <Elements stripe={loadStripe(stripeApiKey)}>
     <Router>
-      <Header />
       {isAuthenticated && <UserOptions user={user} />}
 
       

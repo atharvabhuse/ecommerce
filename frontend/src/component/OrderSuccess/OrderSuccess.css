@@ -1,20 +1,26 @@
 .orderSuccess{
     margin: auto;
     text-align: center;
-    height: 50vh;
+    height: 67vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .orderSuccess > svg{
-    font-size: 7vw;
-    color: tomato;
+    font-size: 10vw;
+    color: rgb(18, 204, 18);
 }
 .orderSuccess > a{
-    background-color: tomato;
-    color: white;
+    color: black;
     margin: 2vmax;
+}
+.orderSuccess > p{
+    font-size: 2vmax;
+}
+.orderSuccess > span{
+    font-size: 2vmax;
+    font-weight: 600;
 }
 
 @media screen  and (max-width: 600px){

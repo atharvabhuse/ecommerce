@@ -1,16 +1,20 @@
 .cart_container{
-    padding: 5vmax;
+    padding-left: 3vmax;
+    padding-right: 3vmax;
+    padding-top: 2vh;
 }
 .cart_header{
-    background-color: tomato;
-    width: 90%;
+    background-color: #232f3e;
+    width: 100%;
     box-sizing: border-box;
     margin: auto;
     display: grid;
-    margin-top: 5vh;
+    margin-top: 1vh;
     grid-template-columns: 4fr 1fr 1fr;
-    font: 300 0.7vmax "Roboto";
+    font: 300 1vmax "Roboto";
     color: white;
+    padding: 2vh 1vw;
+
 }
 .cart_header p{
     margin: 10px;
@@ -19,26 +23,34 @@
     text-align: end;
 }
 .cart_content{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: 4fr 1fr 1fr;
+    border-bottom: 1px solid lightgray;
+}
+.cart_content_last{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    border-bottom: 0px solid lightgray;
 }
 .cart_inputContainer{
     display: flex;
     align-items: center;
-    height: 8vmax;
+    height: 5vmax;
 }
 .cart_inputContainer > button{
     border: none;
-    background-color: black;
+    background-color:#232f3e;
     padding: 0.5vmax;
     cursor: pointer;
     color: white;
     transition: all 0.5s;
 }
 .cart_inputContainer > button:hover{
-    background-color: rgb(38, 37, 37);
+    background-color:  #171f28;
 }
 .cart_inputContainer > input{
     border: none;
@@ -54,29 +66,36 @@
     padding: 0.5vmax;
     color: black;
     justify-content: flex-end;
+    font-size: 1.1vmax;
+    font-weight: 600;
 }
 .cart_grossTotal{
     display: grid;
     grid-template-columns: 2fr 1.2fr;
 }
 .cart_grossTotalBox{
-    border-top: 3px solid tomato;
-    margin: 1vmax 4vmax;
+    border-top: 3px solid #232f3e;
+    margin: 1vmax 0vmax;
     display: flex;
-    padding: 2vmax 0;
-    font: 300 1vmax 0;
+    padding: 1vmax 0;
+    font: 400 1.1vmax 0;
+    font-weight: 600;
     justify-content: space-between;
     box-sizing: border-box;
 }
+.cart_grossTotalBox p{
+    font-size: 1.1vmax;
+}
 .cart_checkoutButton{
+    display: flex;
     justify-content: flex-end;
 }
 .cart_checkoutButton button{
-    background-color: tomato;
+    background-color: #232f3e;
     color: white;
     border: none;
     padding: 0.8vmax 4vmax;
-    margin: 1vmax 4vmax;
+    margin: 1vmax 0vmax;
     width: 50%;
     cursor: pointer;
     border-radius: 30px;
@@ -91,15 +110,19 @@
     height: 80vh;
 }
 .emptyCart svg{
-    color: tomato;
+    color: #232f3e;
     font-size: 3vw;
 }
 .emptyCart > a {
     text-decoration: none;
-    background-color: tomato;
+    background-color: #232f3e;
     border-radius: 10px;
     color: white;
     padding: 1vmax 2vmax;
+}
+.cart_heading{
+    font-size: 2vw;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {

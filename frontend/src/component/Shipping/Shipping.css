@@ -13,10 +13,10 @@
 }
 .shipping_heading{
     text-align: center;
-    font: 400 1.3vmax 'Roboto';
+    font: 600 2vmax 'Roboto';
     width: 50%;
     margin: auto;
-    border-bottom: 1px solid black;
+    margin-top: 2vh;
 }
 .shipping_form{
     display: flex;
@@ -34,29 +34,42 @@
 }
 .shipping_form > div > input{
     padding: 1vmax 4vmax;
-    width: 80%;
+    width: 60%;
     padding-right: 1vmax;
     border-radius: 5px;
     outline: none;
+    color: black;
+    border: 1px solid gray;
 }
 .shipping_form > div > select{
     padding: 1vmax 4vmax;
-    width: 100%;
+    width: 78%;
     padding-right: 1vmax;
     border-radius: 5px;
     outline: none;
 }
 .shipping_button{
     border: none;
-    background-color: tomato;
+    background-color: #232f3e;
     color: white;
-    width: 100%;
+    width: 78%;
     padding: 1vmax;
     cursor: pointer;
     margin: 2vmax;
+    border-radius: 10px;
+}
+.shipping_button_gray{
+    border: none;
+    background-color: gray;
+    color: white;
+    width: 78%;
+    padding: 1vmax;
+    cursor: not-allowed;
+    margin: 2vmax;
+    border-radius: 10px;
 }
 .shipping_button:hover{
-    background-color: rgb(252, 68, 36);
+    background-color: #151c25;
 }
 .err{
     color: red;

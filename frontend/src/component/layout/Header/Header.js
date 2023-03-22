@@ -1,6 +1,8 @@
 import React from 'react'
 import {ReactNavbar} from 'overlay-navbar'
 import logo from '../../../images/logo.jfif'
+import './Header.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -22,10 +24,28 @@ const Header = () => {
     link1Margin: "2vmax",
   }
   return (
-    <div style={{zIndex: 5}}>
-      <ReactNavbar {...options}
-      />
+    // <div style={{zIndex: 5}}>
+    //   <ReactNavbar {...options} />
+
+    // </div>
+    <>
+    <div className='navbar'>
+        <ul className='navbar-ul-1'>
+          <li className='navbar-li'>APB Ecommerce</li>
+          {/* <li><Toggle /></li> */}
+        </ul>
+
+        <ul className='navbar-ul-2'>
+          <Link to='/'>Home</Link>
+          <Link to='/products'>All Products</Link>
+          <Link to='/search'>Search Product</Link>
+          <Link to='/products'>Filter Product</Link>
+          <Link to='/cart'>Cart</Link>
+          <Link to='/account'>Account</Link>
+          <Link to='/login'>Login/ Register</Link>
+         </ul>
     </div>
+    </>
   )
 }
 

@@ -8,6 +8,8 @@ import { useParams } from 'react-router-dom'
 import Pagination from 'react-js-pagination'
 import { Slider } from '@mui/material'
 import MetaData from '../layout/MetaData'
+import Header from '../layout/Header/Header';
+
 
 const categories = [
     'laptop',
@@ -50,12 +52,13 @@ const AllProducts = () => {
             {loading ? (<Loader />) : (
                 <div>
                     <MetaData title='PRODUCTS -- ECOMMERCE' />
-                    <h2>Products</h2>
-                    <div className='allProducts_content'>
+                    <Header />
 
+                    <div className='allProducts_content'>
+                        {/* <div className='allProducts_grayspace'></div> */}
                         <div className='allProducts_filters'>
                             <div className='allProducts_priceFilter'>
-                                <p>Price</p>
+                                <p className='allProducts_filtersHeading'>Price</p>
                                 <Slider
                                     value={price}
                                     onChange={priceHandler}
@@ -63,11 +66,12 @@ const AllProducts = () => {
                                     aria-labelledby='range-slider'
                                     min={0}
                                     max={200000}
+                                    className='slider'
                                 />
                             </div>
 
                             <div className='allProducts_categoryFilter'>
-                                <p>Categories</p>
+                                <p className='allProducts_filtersHeading'>Categories</p>
 
                                 <ul className='allProducts_categoryFilter_ul'>
                                     {
@@ -83,37 +87,39 @@ const AllProducts = () => {
                             </div>
 
                             <div className='allProducts_ratingsFilter'>
-                                <p>Ratings above</p>
+                                <p className='allProducts_filtersHeading'>Ratings above</p>
                                 <fieldset>
-                                <Slider
-                                value={ratings}
-                                onChange={(e, newRating)=>setRatings(newRating)}
-                                aria-labelledby='continous-slider'
-                                valueLabelDisplay='auto'
-                                min={0}
-                                max={5}
-                                />
+                                    <Slider
+                                        value={ratings}
+                                        onChange={(e, newRating) => setRatings(newRating)}
+                                        aria-labelledby='continous-slider'
+                                        valueLabelDisplay='auto'
+                                        min={0}
+                                        max={5}
+                                    />
                                 </fieldset>
                             </div>
                         </div>
 
-
                         <div className='allProducts_productsBox'>
+                            <img width='87.5%' height='10%' src='https://assets.tatacliq.com/medias/sys_master/images/46050570534942.jpg' />
+                            <div className='allProducts_headingContainer'>
+                                <p className='allProducts_heading'>All Products</p>
+                            </div>
                             {products && products.map(data => (
                                 <Product key={data._id} product={data} />
                             ))}
                         </div>
+                        {/* <div className='allProducts_grayspace'></div> */}
                     </div>
-
-
 
                     <div className='allProducts_pagination'>
                         <Pagination activePage={currentPage}
                             itemsCountPerPage={resultPerPage}
                             totalItemsCount={productsCount}
                             onChange={CurrentPageNumberHandler}
-                            nextPageText='Next'
-                            prevPageText='Prev'
+                            nextPageText='Next >'
+                            prevPageText='< Prev'
                             firstPageText='1st'
                             lastPageText='last'
                             itemClass='page_item'

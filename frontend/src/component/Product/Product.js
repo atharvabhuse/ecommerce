@@ -9,8 +9,8 @@ const Product = ({product}) => {
     const options = {
         edit: false,
         color: 'lightgray',
-        activeColor: 'green',
-        size: window.innerWidth < 600 ? 20 : 25,
+        activeColor: '#fad000',
+        size: window.innerWidth < 600 ? 15 : 20,
         value: product.ratings,
         isHalf: true
     }
@@ -19,14 +19,14 @@ const Product = ({product}) => {
     <div className='product_container'>
       <Link className='product_link' to={`/product/${product._id}`}>
         <img className='product_image' src={product.images[0]?product.images[0].url:''} alt='name' />
-        <p>{product.name}</p>
-        <p>{product.description}</p>
-        <p>Id- {product._id}</p>
-        <div>
+        <p className='product_name'>{product.name}</p>
+        <p className='product_desc'>{product.description}</p>
+        <p className='product_id'>Id- {product._id}</p>
+        <span className='product_price'>₹ {new Intl.NumberFormat('en-IN').format(product.price)}</span>
+        <div className='product_reviewContainer'>
             <ReactStars {...options} />
-            <span>({product.numOfReviews} Reviews)</span>
+            <span className='product_review'>({product.numOfReviews} Reviews)</span>
         </div>
-        <span>₹ {new Intl.NumberFormat('en-IN').format(product.price)}</span>
       </Link>
     </div>
   )

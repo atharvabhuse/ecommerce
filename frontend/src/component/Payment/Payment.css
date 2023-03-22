@@ -10,15 +10,24 @@
 }
 .payment_form > p{
     font: 400 2vmax 'Roboto';
-    border-bottom: 1px solid black;
     margin: auto;
     width: 50%;
     text-align: center;
+}
+.sample{
+    background-color: lightgreen;
+    padding: 1vw;
+    border-radius: 5px;
+    width: 100%;
 }
 .payment_form > div{
     display: flex;
     align-items: center;
     margin: 2vmax 0;
+    flex-direction: column;
+    text-align: start;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .payment_input{
     padding: 1vmax 4vmax;
@@ -28,18 +37,20 @@
     border: 1px solid black;
     border-radius: 5px;
     outline: none;
+    margin: 0;
 }
 .payment_formBtn{
     border: none;
-    background-color: tomato;
+    background-color: #232f3e;
     color: white;
     font: 300 0.9vmax 'Roboto';
     width: 100%;
     cursor: pointer;
     padding: 0.8vmax;
+    border-radius: 10px;
 }
 .payment_formBtn:hover{
-    background-color: rgb(252, 71, 40);
+    background-color: #18212b;
 }
 
 @media screen and (max-width: 600px) {

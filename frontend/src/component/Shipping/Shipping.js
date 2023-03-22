@@ -6,6 +6,7 @@ import MetaData from '../layout/MetaData'
 import CheckoutSteps from '../CheckoutSteps/CheckoutSteps'
 import { saveShippingInfo } from '../../actions/cartAction'
 import { useNavigate } from 'react-router-dom'
+import Header from '../layout/Header/Header'
 
 const Shipping = () => {
     const dispatch = useDispatch()
@@ -35,6 +36,7 @@ const Shipping = () => {
     return (
         <div className='shipping_container'>
             <MetaData title='Shipping Details' />
+            <Header />
             <CheckoutSteps activeSteps={0} />
             <div className='shipping_box'>
                 <h2 className='shipping_heading'>Shipping Details</h2>
@@ -114,7 +116,7 @@ const Shipping = () => {
             <input
                 type='submit'
                 value='Continue'
-                className='shipping_button'
+                className={state ? 'shipping_button' : 'shipping_button_gray'}
                 disabled={state ? false : true}
             />
         </form>

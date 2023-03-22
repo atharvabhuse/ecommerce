@@ -9,3 +9,9 @@
 .MuiStepConnector-completed{
     background-color: tomato;
 }
+.stepper{
+    width: 100vw;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}

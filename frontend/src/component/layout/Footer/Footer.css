@@ -1,16 +1,66 @@
 .footer_Container{
     display: flex;
-    background-color: black;
+    background-color:  #232f3e;
     color: white;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: center;
-    width: 100vw;
-    margin-top: 2rem;
-
+    width: 100%;
+    margin-top: 2vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    margin-right: 4vw;
 }
 .footer_Container1{
     padding-top: 1vh;
     padding-bottom: 1vh;
-    width: 33vw;
+    width: 25vw;
+    font-size: 6vmax;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+.footer_Container1_span{
+    font-size: 1vw;
+}
+.footer_Container2_span{
+    font-size: 1vmax;
+    padding-top: 0.4vw;
+    font-weight: 500;
+}
+.footer_Container2{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0;
+    text-align: start;
+    flex-wrap: wrap;
+}
+.footer_Container2Header{
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.footer_Container2 > a{
+    text-decoration: none;
+    color: white;
+    padding-top: 0.4vh;
+    font-size: 0.8vmax;
+}
+.footer_Container2SpanData{
+    text-decoration: none;
+    color: white;
+    padding-top: 0.4vh;
+    font-size: 0.8vmax;
+}
+.allProducts_filtersHeading{
+    color: black;
+    font-size: 1vmax;
+    font-weight: 600;
+}
+.slider{
+    color: #232f3e;
 }

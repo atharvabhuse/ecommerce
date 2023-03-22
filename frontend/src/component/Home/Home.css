@@ -1,13 +1,152 @@
 .home_container{
     color: black;
-    background-color: red;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
     align-self: center;
-    height: 100vh;
+    height: 82vh;
+    margin-bottom: 10vh;
+}
+.home_image{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.home_imageText1{
+    color: black;
+    display: flex;
+    font-size: 3vmax;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255,255,255,0.5);
+    width: 100%;
+    padding: 1vw;
+    height: 20vh;
+}
+.home_imageText2{
+    color: black;
+    display: flex;
+    font-size: 2vmax;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255,255,255,0.5);
+    padding: 1vw;
+    height: 20vh;
+}
+.home_imageButton{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1.5vh 2vw;
+    margin-top: 1vh;
+    cursor: pointer;
+}
+.home_imageButton:hover{
+    background-color: #232f3e;
+    color: white;
+}
+.home_filterButton{
+    background-color: #232f3e;
+    color: white;
+    border-radius: 10px;
+    padding: 1.5vh 2vw;
+    margin-top: 1vh;
+    cursor: pointer;
+}
+.home_filterButton:hover{
+    background-color: #1b2531;
+    color: white;
+}
+.home_imageP{
+    opacity: 1;
+}
+.home_featured1{
+    width: 50vw;
+    height: 92vh;
+    margin-top: 8vh;
+    /* background-image: url('https://i.teknolojioku.com/2/1280/720/storage/files/images/2023/02/01/galaxy-s23-2fca-cover-WmsA_cover.jpg'); */
+    background-image: url('https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe3ff1a23-615c-4ffa-aa45-4e0b8e11bbd5_2551x1434.jpeg');
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: flex-end; */
+}
+.home_featured2{
+    width: 25vw;
+    height: 92vh;
+    margin-top: 8vh;
+    background-image: url('https://images.unsplash.com/photo-1588099768531-a72d4a198538?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+    /* justify-content: flex-end; */
+
+}
+.home_featured3{
+    width: 25vw;
+    height: 92vh;
+    margin-top: 8vh;
+    background-image: url('https://images.pexels.com/photos/12717157/pexels-photo-12717157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+    /* justify-content: flex-end; */
+}
+.home_grayspace{
+    background-color: rgb(255, 255, 255);
+    width: 10vw;
+    margin-top: -1vh;
+}
+.home_grayspace_premium{
+    background-color:  rgb(255, 255, 255);
+    width: 10vw;
+    margin-top: -1vh;
+}
+.home_topDealsHeading{
+    padding-left: 4vw;
+    background-color: #232f3e;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: white;
+}
+
+.home_topDealsHeading_premium{
+    padding-left: 4vw;
+    background-color: #232f3e;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+}
+.home_content{
+    display: flex;
+    flex-direction: row;
+    margin-top: -1vh;
+}
+.home_content_premium{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vh;
 }
 /* .home_container::after{
     content: '';
@@ -37,6 +176,42 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2vmax;
     justify-content: flex-start;
+    width: 80vw;
+    padding-left: 2vw;
+    background-color: white;
+}
+.home_product_container_premium{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 80vw;
+    padding-left: 2vw;
+    background-color: white;
+}
+.home_topDeals{
+    display: flex;
+    flex-direction: column;
+}
+.home_topDeals_premium{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.home_bankImage{
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.home_filterButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+.home_grayspace_premium_col{
+    display: flex;
+    flex-direction: column;
 }

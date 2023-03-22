@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { clearErrors, createOrder } from '../../actions/orderAction'
+import Header from '../layout/Header/Header'
 
 const Payment = () => {
 
@@ -101,11 +102,13 @@ const Payment = () => {
     }, [dispatch, error])
     return (
         <div>
+            <Header />
             <MetaData title='Payment' />
             <CheckoutSteps activeSteps={2} />
             <div className='payment_container'>
                 <form className='payment_form' onSubmit={(e) => submitHandler(e)}>
                     <p>Card Info</p>
+                    {/* <p className='sample'> Test card Number- 4000 0027 6000 3184</p> */}
                     <div>
                         <CardNumberElement className='payment_input' />
                     </div>
@@ -116,7 +119,7 @@ const Payment = () => {
                         <CardCvcElement className='payment_input' />
                     </div>
 
-                    <input type='submit' value={`Pay- ₹ ${orderInfo && orderInfo.totalPrice}`} ref={payBtn} className='payment_formBtn' />
+                    <input type='submit' value={`Pay ₹ ${orderInfo && orderInfo.totalPrice}`} ref={payBtn} className='payment_formBtn' />
                 </form>
             </div>
         </div>

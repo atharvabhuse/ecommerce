@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import CheckoutSteps from '../CheckoutSteps/CheckoutSteps'
+import Footer from '../layout/Footer/Footer'
+import Header from '../layout/Header/Header'
 import MetaData from '../layout/MetaData'
 import './ConfirmOrder.css'
 
@@ -37,12 +39,13 @@ const ConfirmOrder = () => {
 
     return (
         <div>
+            <Header />
             <MetaData title='Confirm Order' />
             <CheckoutSteps activeSteps={1} />
             <div className='confirmOrder_maincontainer'>
                 <div className='confirmOrder_container'>
                     <div className='confirmOrder_shippingArea'>
-                        <p>Shipping Info</p>
+                        <p className='confirmOrder_heading'>Shipping Info</p>
                         <div className='confirmOrder_shippingAreaBox'>
                             <div>
                                 <p>Name:</p>
@@ -60,7 +63,7 @@ const ConfirmOrder = () => {
                     </div>
 
                     <div className='confirmOrder_cartItems'>
-                        <p>Your Cart Items:</p>
+                        <p className='confirmOrder_heading'>Your Cart Items:</p>
                         <div className='confirmOrder_cartItemsContainer'>
                             {cartItems && cartItems.map((item) => (
                                 <div key={item.product} >
@@ -69,7 +72,7 @@ const ConfirmOrder = () => {
                                         {item.name}
                                     </Link>
                                     <span>
-                                        {item.quantity} X ₹{item.price} = {" "}
+                                        {item.quantity} X ₹{item.price}&nbsp; = &nbsp;{" "}
                                         <b>₹ {new Intl.NumberFormat('en-IN').format(item.price * item.quantity)}</b>
                                     </span>
                                 </div>
@@ -80,7 +83,7 @@ const ConfirmOrder = () => {
 
                 <div>
                     <div className='confirmOrder_productSummary'>
-                        <p>Order Summary</p>
+                        <p className='confirmOrder_heading'>Order Summary</p>
                         <div>
                             <div>
                                 <p>Subtotal:</p>
@@ -97,7 +100,7 @@ const ConfirmOrder = () => {
                         </div>
 
                         <div className='confirmOrder_summaryTotal'>
-                            <p>Total:</p>
+                            <span>Total:</span>
                             <span>₹ {new Intl.NumberFormat('en-IN').format(totalPrice)}</span>
                         </div>
 

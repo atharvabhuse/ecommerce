@@ -46,11 +46,14 @@ app.use("/api/v1", user)
 app.use("/api/v1",order)
 app.use('/api/v1',payment)
 
-
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-
+// Serving react application from build folder
+app.use(express.static(path.resolve(__dirname, "build")));
 app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+    res.sendFile(path.resolve(__dirname, "build", "index.html"), function(err) {
+        if(err) {
+            res.status(500).send(err)
+        }
+    });
 });
 
 
