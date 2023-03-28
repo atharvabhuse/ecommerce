@@ -10,7 +10,6 @@ import { Slider } from '@mui/material'
 import MetaData from '../layout/MetaData'
 import Header from '../layout/Header/Header';
 
-
 const categories = [
     'laptop',
     'footware',
