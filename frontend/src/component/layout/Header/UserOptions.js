@@ -44,7 +44,7 @@ const UserOptions = ({ user }) => {
                 open={open}
                 direction="down"
                 icon={<SpeedDialIcon />}>
-                {user.role === "admin" ? <SpeedDialAction icon={<DashboardIcon />} onClick={DashboardHandler} tooltipTitle="Dashboard" /> : ''}
+                {user?.role && user?.role === "admin" ? <SpeedDialAction icon={<DashboardIcon />} onClick={DashboardHandler} tooltipTitle="Dashboard" /> : ''}
                 <SpeedDialAction icon={<ListAltIcon />} onClick={OrdersHandler} tooltipTitle="List" />
                 <SpeedDialAction icon={<PersonIcon />} onClick={AccountHandler} tooltipTitle="Person" />
                 <SpeedDialAction icon={<ShoppingCartIcon />} onClick={cartHandler} tooltipTitle="Cart" />
