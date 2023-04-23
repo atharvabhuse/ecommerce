@@ -36,7 +36,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "preinstall": "npm install --legacy-peer-deps",
+    "predeploy": "npm run build",
+    "deploy": "aws amplify publish --app d33j3wflkf1v3m --branch main",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
