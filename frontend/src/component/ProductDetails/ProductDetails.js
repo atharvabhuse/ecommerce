@@ -3,13 +3,14 @@ import './ProductDetails.css'
 import Carousel from 'react-material-ui-carousel'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProductDetails } from '../../actions/productAction'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import ReactStars from 'react-rating-stars-component'
 import ReviewCard from '../ReviewCard/ReviewCard'
 import { Divider } from '@mui/material'
 import Loader from '../layout/Loader/Loader'
 import MetaData from '../layout/MetaData'
 import { addItemsToCart } from '../../actions/cartAction'
+import Header from '../layout/Header/Header'
 
 
 
@@ -18,6 +19,8 @@ const ProductDetails = () => {
     const { id } = useParams()
 
     const dispatch = useDispatch()
+
+    const navigate = useNavigate()
 
     const { product, loading, error } = useSelector((state) => state.productDetails)
 
@@ -57,6 +60,7 @@ const ProductDetails = () => {
 
     const addToCartHandler = () => {
         dispatch(addItemsToCart(product._id,quantity))
+        navigate('/cart')
     }
 
     console.log(product)
@@ -65,6 +69,7 @@ const ProductDetails = () => {
             {loading ? <Loader /> :
                 (<div>
                     <MetaData title={`${product.name} -- ECOMMERCE`} />
+                    <Header />
                     <div className='productDetails_container'>
                         <div className='productDetails_imageContainer'>
                             <Carousel>

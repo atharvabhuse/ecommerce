@@ -53,7 +53,7 @@ const Cart = () => {
                 :
                 (
                 <div className='cart_container'>
-                    <img width='100%' height='10%' src='https://assets.tatacliq.com/medias/sys_master/images/46050570534942.jpg' />
+                    <img className='img' src='https://assets.tatacliq.com/medias/sys_master/images/46050570534942.jpg' />
                     <p className='cart_heading'>Shopping Cart</p>
                     <div className='cart_header'>
                         <p>Product</p>

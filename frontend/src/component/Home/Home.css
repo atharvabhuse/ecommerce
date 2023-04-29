@@ -389,7 +389,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
-        width: 100vw;
+        width: 100%;
         padding-left: 2vw;
         background-color: white;
     }
@@ -399,7 +399,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
-        width: 100vw;
+        width: 100%;
         padding-left: 2vw;
         background-color: white;
     }

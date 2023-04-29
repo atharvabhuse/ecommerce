@@ -3,6 +3,7 @@ import {ReactNavbar} from 'overlay-navbar'
 import logo from '../../../images/logo.jfif'
 import './Header.css'
 import { Link } from 'react-router-dom'
+import {useDispatch, useSelector} from "react-redux"
 
 const Header = () => {
 
@@ -23,6 +24,8 @@ const Header = () => {
     link1Size:"2vmax",
     link1Margin: "2vmax",
   }
+  const {isAuthenticated} = useSelector(state => state.user)
+
   return (
     // <div style={{zIndex: 5}}>
     //   <ReactNavbar {...options} />
@@ -41,8 +44,8 @@ const Header = () => {
           <Link to='/search'>Search Product</Link>
           <Link to='/products'>Filter Product</Link>
           <Link to='/cart'>Cart</Link>
-          <Link to='/account'>Account</Link>
-          <Link to='/login'>Login/ Register</Link>
+          {isAuthenticated==false?'':<Link to='/account'>Account</Link>}
+          {isAuthenticated==true?'':<Link to='/login'>Login/ Register</Link>}
          </ul>
     </div>
     </>

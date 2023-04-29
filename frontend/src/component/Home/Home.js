@@ -6,7 +6,7 @@ import MetaData from '../layout/MetaData'
 import { getProduct } from '../../actions/productAction'
 import { useSelector, useDispatch } from 'react-redux'
 import Loader from '../layout/Loader/Loader'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Header from '../layout/Header/Header'
 import AllProducts from '../AllProducts/AllProducts'
 
@@ -14,11 +14,25 @@ const Home = () => {
 
   const dispatch = useDispatch()
 
+  const navigate = useNavigate()
+
   const { loading, error, products, productsCount } = useSelector(state => state.products)
 
   useEffect(() => {
     dispatch(getProduct())
   }, [dispatch])
+
+  const buyNowHandler = () => {
+    navigate(`/products/samsung`)
+  }
+
+  const checkHandler = () => {
+    navigate(`/products/nike`)
+  }
+  
+  const grabHandler = () => {
+    navigate(`/products/zara`)
+  }
 
   return (
     <>
@@ -35,14 +49,14 @@ const Home = () => {
               {/* <img className='home_image' src='https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/samsung-galaxy-s23-s23-2943000.jpg?tf=828x' /> */}
               <div className='home_imageText1'>
                 <span>Samsung Galaxy S23 |S23+</span>
-                <button className='home_imageButton'>Buy Now</button>
+                <button onClick={buyNowHandler} className='home_imageButton'>Buy Now</button>
                 {/* Samsung Galaxy S23 series is available from ₹65,000 till March. Avail Now. */}
               </div>
             </div>
             <div className='home_featured2'>
               <div className='home_imageText2'>
                 <span>New collection of Nike Air Jordan is available </span>
-                <button className='home_imageButton'>Check it Now</button>
+                <button onClick={checkHandler} className='home_imageButton'>Check it Now</button>
                 {/* <img className='home_image' src='https://images.unsplash.com/photo-1588099768531-a72d4a198538?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' /> */}
                 {/* <img className='home_image' src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80' /> */}
               </div>
@@ -50,7 +64,7 @@ const Home = () => {
             <div className='home_featured3'>
               <div className='home_imageText2'>
                 <span>Upto 80% of on ZARA perfumes</span>
-                <button className='home_imageButton'>Grab it Now</button>
+                <button onClick={grabHandler} className='home_imageButton'>Grab it Now</button>
                 {/* <img className='home_image' src='https://images.unsplash.com/photo-1619959062935-ac914b8422f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' /> */}
                 {/* <img className='home_image' src='https://images.pexels.com/photos/12717157/pexels-photo-12717157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' /> */}
               </div>

@@ -5,6 +5,7 @@ import { clearErrors, forgotpassword, loadUser } from '../../actions/userAction'
 import Loader from '../layout/Loader/Loader'
 import MetaData from '../layout/MetaData'
 import './ForgotPassword.css'
+import Header from '../layout/Header/Header'
 const ForgotPassword = () => {
 
     const dispatch = useDispatch()
@@ -30,11 +31,16 @@ const ForgotPassword = () => {
         }
     }, [message, dispatch, error])
 
+    const linkHandler = () => {
+        navigate('/login')
+    }
+
 
     return (
         <>
             {loading ? <Loader /> :
                 <>
+                <Header />
                     <MetaData title='Change Password' />
                     <div className='forgotPassword_container'>
                         <div className='forgotPassword_box'>
@@ -52,7 +58,7 @@ const ForgotPassword = () => {
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
                                 </div>
-                                <p style={{ color: 'red' }}>{'Forgot Password functionality is not available right now. You can contact with us using this support number- 7588509301. we will help you to login to your account after verification.'}</p>
+                                <p style={{ color: 'red' }}>Forgot Password functionality is not available right now. You can contact with us using this support number- <span  style={{ color: 'green' }}>7588509301</span>. we will help you to login to your account after verification.</p>
                                 <input
                                     type='submit'
                                     value='Send Email'
@@ -60,7 +66,7 @@ const ForgotPassword = () => {
                                 // disabled={loading ? true : false}
                                 />
                             </form>
-
+                            <div onClick={linkHandler} className='link'>Go back to Login/Signup page</div>
                         </div>
                     </div>
                 </>}

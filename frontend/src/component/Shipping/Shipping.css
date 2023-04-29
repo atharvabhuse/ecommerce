@@ -43,7 +43,7 @@
 }
 .shipping_form > div > select{
     padding: 1vmax 4vmax;
-    width: 78%;
+    width: 77%;
     padding-right: 1vmax;
     border-radius: 5px;
     outline: none;
@@ -88,6 +88,13 @@
 .shipping_form > input,
 .shipping_form > select{
     padding: 5vw 10vw;
-    font: 300 4vw 'Roboto'
+    font: 300 4vw 'Roboto';
+}
+.shipping_form > div > select{
+    padding: 1vmax 4vmax;
+    width: 75%;
+    padding-right: 1vmax;
+    border-radius: 5px;
+    outline: none;
 }
 }

@@ -7,6 +7,8 @@ import './LoginSignup.css'
 import {useDispatch, useSelector} from "react-redux"
 import { clearErrors, login, register } from '../../actions/userAction';
 import Loader from '../layout/Loader/Loader';
+import Header from '../layout/Header/Header';
+import Footer from '../layout/Footer/Footer';
 
 const LoginSignup = () => {
 
@@ -59,7 +61,7 @@ const LoginSignup = () => {
         myForm.set('password',password)
         console.log('form register')
         dispatch(register(myForm))
-        navigate('/login')
+        navigate('/')
     }
 
     const registerDataChange =(e) => {
@@ -93,12 +95,13 @@ const LoginSignup = () => {
     const loginSubmit = (e) => {
         e.preventDefault()
         dispatch(login(loginEmail, loginPassword))
-        navigate('/login')       
+        navigate('/')       
     }
     console.log("form login", isAuthenticated,error)
 
   return (
     <>
+    <Header />
     {loading ? <Loader /> : <div className='loginSignup_container'>
         <div className='loginSignup_box'>
             <div>

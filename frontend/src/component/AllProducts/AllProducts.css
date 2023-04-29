@@ -102,10 +102,121 @@
 }
 
 @media screen and (max-width: 600px){
-.page_link{
-    font: 300 1.7vmax "Roboto";
+    .allProducts_content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0.5vw;
+        justify-content: center;
+        width: 100%;
+    }
+    .allProducts_filters{
+        display: flex;
+        flex-direction: column;
+        border-right: 0px solid lightgray;
+        margin-right: 1vw;
+        padding-right: 1vw;
+        padding-left: 1vmax;
+    }
+    .allProducts_productsBox{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .allProducts_grayspace{
+        width: 10vmax;
+        background-color: rgb(232, 230, 230);
+    }
+    .allProducts_priceFilter{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin-top: 5vh;
+    }
+    .allProducts_pagination{
+        display: flex;
+        justify-content: center;
+        margin: 2vmax;
+        width: 90%;
+        font-size: 2vmax;
+    }
+    .pagination{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        border: 1px solid lightgray;
+        padding: 0.2vw;
+        border-radius: 10px;
+    }
+    .page_item{
+        background-color: white;
+        list-style: none;
+        padding: 1.5vmax 2vmax;
+        transition: all 0.3s;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 0.5vw;
+    }
+    .page_item :nth-child(1){
+        border-radius: 5px 0 0 5px;
+    }
+    .page_item :last-child{
+        border-radius: 0 5px 5px 0;
+    }
+    .page_item:hover{
+        background-color: rgb(231, 226, 226);
+    }
+    .page_link{
+        text-decoration: none;
+        font: 400 0.8vmax "Roboto";
+        color: black;
+        transition: all 0.3s;
+        font-size: 2vmax;
+    }
+    .page_link:hover{
+        color: black;
+    }
+    .pageItemActive{
+        background-color: #232f3e;
+    }
+    .pageItemActive:hover{
+        background-color: #151c26;
+    }
+    .pageLinkActive{
+        color: white;
+    }
+    .allProducts_categoryFilter_ul{
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .allProducts_categoryFilter_li{
+        list-style: none;
+        cursor: pointer;
+        padding: 0.5vmax;
+    }
+    .allProducts_categoryFilter_li:hover{
+        color: tomato;
+    }
+    .allProducts_heading{
+        padding-left: 4vw;
+        background-color: #232f3e;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        color: white;
+        font-weight: 600;
+        font-size: 1.5vmax;
+    }
+    .allProducts_headingContainer{
+        width: 70vmax;
+    }
+    .allProducts_filtersHeading{
+        font-size: 2vmax;
+    }
 }
-.allProducts_categoryFilter_li{
-    font-size: 2vw;
-}
-}
+
+
+
+

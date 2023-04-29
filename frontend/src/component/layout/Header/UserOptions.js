@@ -31,7 +31,7 @@ const UserOptions = ({ user }) => {
     }
     const LogoutUserHandler = () => {
         dispatch(logout())
-        navigate('/login')
+        navigate('/')
     }
 
     return (

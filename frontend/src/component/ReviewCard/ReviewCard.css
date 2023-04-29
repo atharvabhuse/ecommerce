@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     text-align: left;
-    width: 20vw;
+    width: 15vw;
 }
 .reviewCard_image{
     width: 5vw;
@@ -20,4 +20,12 @@
     justify-content: center;
     align-items: center;
     text-align: left;
+}
+@media screen and (max-width: 600px) {
+    .reviewCard_container{
+        width: 43%;
+    }
+    .reviewCard_image{
+        width: 10vmax;
+    }
 }

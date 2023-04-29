@@ -101,7 +101,7 @@ const AllProducts = () => {
                         </div>
 
                         <div className='allProducts_productsBox'>
-                            <img width='87.5%' height='10%' src='https://assets.tatacliq.com/medias/sys_master/images/46050570534942.jpg' />
+                            {/* <img width='98%' src='https://assets.tatacliq.com/medias/sys_master/images/46050570534942.jpg' /> */}
                             <div className='allProducts_headingContainer'>
                                 <p className='allProducts_heading'>All Products</p>
                             </div>

@@ -5,6 +5,7 @@ import { clearErrors, loadUser, update } from '../../actions/userAction.js'
 import Loader from '../layout/Loader/Loader.js'
 import MetaData from '../layout/MetaData.js'
 import './UpdateProfile.css'
+import Header from '../layout/Header/Header.js'
 
 const UpdateProfile = () => {
 
@@ -51,6 +52,7 @@ const UpdateProfile = () => {
         {loading ? <Loader /> : 
         <>
         <MetaData title='Update Profile' />
+        <Header />
         <div className='updateProfile_container'>
             <div className='updateProfile_box'>
                 <h2 className='updateProfile_heading'>Update Profile</h2>
