@@ -51,11 +51,10 @@ const App = () => {
   }, [])
 
   return (
+    <div className='app-main'>
     <Elements stripe={loadStripe(stripeApiKey)}>
     <Router>
       {isAuthenticated && <UserOptions user={user} />}
-
-      
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/product/:id' element={<ProductDetails />} />
@@ -78,6 +77,7 @@ const App = () => {
       <Footer />
     </Router>
     </Elements>
+    </div>
   )
 }
 
