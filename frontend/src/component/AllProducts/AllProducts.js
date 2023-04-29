@@ -11,13 +11,11 @@ import MetaData from '../layout/MetaData'
 import Header from '../layout/Header/Header';
 
 const categories = [
-    'laptop',
-    'footware',
-    'bottom',
-    'tops',
-    'attire',
-    'camera',
-    'smartphone'
+    'smartphone',
+    'mens fashion',
+    'women fashion',
+    'perfume',
+    'footware'
 ]
 
 const AllProducts = () => {
@@ -117,8 +115,8 @@ const AllProducts = () => {
                             itemsCountPerPage={resultPerPage}
                             totalItemsCount={productsCount}
                             onChange={CurrentPageNumberHandler}
-                            nextPageText='Next >'
-                            prevPageText='< Prev'
+                            nextPageText='Next'
+                            prevPageText='Prev'
                             firstPageText='1st'
                             lastPageText='last'
                             itemClass='page_item'

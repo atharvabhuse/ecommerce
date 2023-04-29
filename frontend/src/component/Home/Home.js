@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import { CgScrollV } from 'react-icons/cg'
 import Product from '../Product/Product'
@@ -33,6 +33,9 @@ const Home = () => {
   const grabHandler = () => {
     navigate(`/products/zara`)
   }
+
+  const topDeal = products.filter((data)=>data.category=='footware')
+  console.log('topDeal',products,products?.filter((data)=>data.category=='footware'))
 
   return (
     <>
@@ -79,7 +82,7 @@ const Home = () => {
                 {console.log('products', products)}
                 <div className='home_product_container_premium'>
                   {
-                    products && products.map(data => (
+                    products && topDeal?.map(data => (
                       <Product product={data} />
                     ))
                   }

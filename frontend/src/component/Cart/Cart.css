@@ -68,6 +68,7 @@
     justify-content: flex-end;
     font-size: 1.1vmax;
     font-weight: 600;
+    margin-right: 0.5vmax;
 }
 .cart_grossTotal{
     display: grid;
@@ -173,8 +174,9 @@
     }
     .cart_checkoutButton > button{
         padding: 2vmax 4vmax;
-        width: 80%;
+        width: 40%;
         font: 300 2vmax 'Roboto';
+        transform: scale(0.9);
         align-items: flex-end;
     }
     .emptyCart{
